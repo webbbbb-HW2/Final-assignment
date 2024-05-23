@@ -1298,3 +1298,19 @@ section {
 .footer .credits a {
   color: var(--color-white);
 }
+
+.icon-img{
+  width: 20px;
+}
+
+.icon-hover{position: relative;}
+
+.icon-hover img{position: absolute;
+-webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.icon-hover img:last-child:hover{
+  opacity: 0;
+}
