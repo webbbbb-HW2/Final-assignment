@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress {
+            width: 0%;
+            height: 3px;
+            background-color: red;
+            transition: width 0.5s ease;
+            /* 进度条动画效果 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="catagori.html" onmouseover="startProgress('progress1')" onmouseout="resetProgress('progress1')">
+                <h5><i class="fa-solid fa-palette " style="color: #c8745f;"></i> 藝術學院</h5>
+                <div class="progress" id="progress1"></div>
+            </a>
+        </li>
+        <!-- 其他学院链接 -->
+    </ul>
+    <script>function startProgress(progressId) {
+            var progress = document.getElementById(progressId);
+            progress.style.width = '100%';
+        }
+
+        function resetProgress(progressId) {
+            var progress = document.getElementById(progressId);
+            progress.style.width = '0%';
+        }</script>
+</body>
+
+</html>
