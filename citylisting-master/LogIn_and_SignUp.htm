@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Webleb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/LogIn_and_SignUp.css">
+</head>
+<body>
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div class="section">
+  <div class="container">
+    <div class="row full-height justify-content-center">
+      <div class="col-12 text-center align-self-center py-5">
+        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+          <h6 class="mb-0 pb-3"><span>登入</span><span>註冊</span></h6>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                <label for="reg-log"></label>
+          <div class="card-3d-wrap mx-auto">
+            <div class="card-3d-wrapper">
+              <div class="card-front">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">登入</h4>
+                    <div class="form-group">
+                      <input type="email" class="form-style" placeholder="電子郵件">
+                      <i class="input-icon uil uil-at"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="password" class="form-style" placeholder="密碼">
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    <a href="#" class="btn mt-4">登入</a>
+                    <p class="mb-0 mt-4 text-center"><a href="#" class="link">忘記密碼?</a></p>
+                      </div>
+                    </div>
+                  </div>
+              <div class="card-back">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-3 pb-3">註冊</h4>
+                    <div class="form-group">
+                      <input type="text" class="form-style" placeholder="你的名字">
+                      <i class="input-icon uil uil-user"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="tel" class="form-style" placeholder="電話號碼">
+                      <i class="input-icon uil uil-phone"></i>
+                    </div>	
+                    <div class="form-group mt-2">
+                      <input type="email" class="form-style" placeholder="電子郵件">
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" class="form-style" placeholder="密碼">
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    <a href="#" class="btn mt-4">註冊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getParameterByName(sParam) {
+    /*
+    name = name.replace(/[\[\]]/g, '\\$&');
+    let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    let results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    */
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+  }
+
+  window.onload = function() {
+    let action = getParameterByName('action'); 
+    let checkBox = document.getElementById('reg-log'); 
+    if(action === 'LogIn') {
+      checkBox.checked = false; 
+    } else if(action === 'SignUp') {
+      checkBox.checked = true; 
+    }
+  };
+
+</script>
+
+</body>
+</html>
