@@ -1,0 +1,132 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Interactive Calendar</title>
+      <style>
+          .calendar {
+              width: 300px;
+              margin: 0 auto;
+          }
+          .calendar-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+          .days {
+              display: flex;
+              flex-wrap: wrap;
+          }
+          .day {
+              width: calc(100% / 7);
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+          }
+          .modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              justify-content: center;
+              align-items: center;
+          }
+          .modal-content {
+              background: white;
+              padding: 20px;
+              border-radius: 5px;
+          }
+          .modal-content p {
+              margin: 0;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="calendar">
+          <div class="calendar-header">
+              <button onclick="prevMonth()">Prev</button>
+              <h3 id="monthYear"></h3>
+              <button onclick="nextMonth()">Next</button>
+          </div>
+          <div class="days" id="calendarDays"></div>
+      </div>
+  
+      <div class="modal" id="modal">
+          <div class="modal-content">
+              <span onclick="closeModal()" style="cursor:pointer;">&times;</span>
+              <p id="modalText"></p>
+          </div>
+      </div>
+  
+      <script>
+          const monthNames = ["January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December"];
+          let currentMonth = new Date().getMonth();
+          let currentYear = new Date().getFullYear();
+  
+          function renderCalendar(month, year) {
+              const calendarDays = document.getElementById('calendarDays');
+              const monthYear = document.getElementById('monthYear');
+              calendarDays.innerHTML = '';
+              monthYear.innerText = `${monthNames[month]} ${year}`;
+  
+              const firstDay = new Date(year, month, 1).getDay();
+              const daysInMonth = new Date(year, month + 1, 0).getDate();
+  
+              for (let i = 0; i < firstDay; i++) {
+                  const emptyDay = document.createElement('div');
+                  emptyDay.classList.add('day');
+                  calendarDays.appendChild(emptyDay);
+              }
+  
+              for (let i = 1; i <= daysInMonth; i++) {
+                  const day = document.createElement('div');
+                  day.classList.add('day');
+                  day.innerText = i;
+                  day.onclick = () => openModal(i);
+                  calendarDays.appendChild(day);
+              }
+          }
+  
+          function prevMonth() {
+              if (currentMonth === 0) {
+                  currentMonth = 11;
+                  currentYear--;
+              } else {
+                  currentMonth--;
+              }
+              renderCalendar(currentMonth, currentYear);
+          }
+  
+          function nextMonth() {
+              if (currentMonth === 11) {
+                  currentMonth = 0;
+                  currentYear++;
+              } else {
+                  currentMonth++;
+              }
+              renderCalendar(currentMonth, currentYear);
+          }
+  
+          function openModal(day) {
+              const modal = document.getElementById('modal');
+              const modalText = document.getElementById('modalText');
+              modalText.innerText = `You clicked on ${monthNames[currentMonth]} ${day}, ${currentYear}`;
+              modal.style.display = 'flex';
+          }
+  
+          function closeModal() {
+              const modal = document.getElementById('modal');
+              modal.style.display = 'none';
+          }
+  
+          renderCalendar(currentMonth, currentYear);
+      </script>
+  </body>
+  </html>
