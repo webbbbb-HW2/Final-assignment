@@ -22,16 +22,24 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- bookstrapt  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- //新增 -->
+    <script src="https://kit.fontawesome.com/24049ba7cf.js" crossorigin="anonymous"></script>
     <style>
         .sidebar {
-            border: 1px solid rgb(255, 212, 110);
-            padding: 15px;
-        }
-        .sidebar2 {
-            border: 1px solid rgb(255, 223, 155);
-            padding:30px;
+            width: 300px;
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(245, 245, 245);
+            padding: 20px;
         }
     </style>
+
 </head>
 
 <body>
@@ -115,843 +123,227 @@
         <!--Hero End -->
         <!-- Categories Area Start -->
 
-        <div class="categories-area section-padding30">
+        <div class="categories-area section-padding30" style="background-color: rgb(255, 255, 255);">
             <div class="container">
+                <h3 style="text-align: center;"><i class="fa-solid fa-palette " style="color: #c8745f;"></i> 藝術學院</h3>
+                <hr>
+
+                <div style="padding-bottom: 15px;"></div>
                 <div class="row">
                     <!-- 左 -->
                     <div class="col-xl-3 col-lg-4 col-md-6" style="padding-right: 100px;">
                         <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Search Keyword"
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btns" type="button"><i class="ti-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">Search</button>
-                            </form>
-                        </aside>
-
-
-                        <aside class="single_sidebar_widget post_category_widget" style="padding-top: 100px;">
                             <aside class="sidebar">
-                                <h4 class="widget_title" style="color:#d82a2a;padding :1px;">所屬學院</h4>
-                                <div style="width: 90px; height: 5px; background-color: rgb(187, 55, 55);"></div>
+                                <h4 class="widget_title" style="padding :1px;"><i class="fa-solid fa-magnifying-glass "
+                                        style="color: #131a78;"></i> 快速搜尋</h4>
 
-                                <div style="padding-bottom: 15px;"></div>
+                                <div
+                                    style="width: 100px; height: 5px; background-color: rgb(58, 56, 119);margin-left: 30px;margin-bottom: 10px;">
+                                </div>
+                                <hr>
+                                <form action="#">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <h5><input type="text" class="form-control" placeholder="輸入儀器名稱"></h5>
+                                            <div class="input-group-append">
+                                                <button type="button"
+                                                    style="background-color: rgb(16, 16, 112);width: 190px;">查詢</button>
+                                            </div>
 
-                                <ul>
-                                    <li>
-                                        <a href="#artist">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>藝術學院</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#education.html">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>教育學院</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>醫學院</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>理工學院</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>民生學院</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p><span style="color: rgb(190, 36, 36);"> > </span>織品服裝學院</p>
-                                        </a>
-                                    </li>
-                                </ul>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <hr>
+
+
+
+                                <aside class="single_sidebar_widget post_category_widget" style="padding-top: 100px;">
+
+
+                                    <h4 class="widget_title" style="padding :1px;"><i class="fa-solid fa-school-flag "
+                                            style="color: #131a78;"></i> 所屬學院</h4>
+                                    <div
+                                        style="width: 100px; height: 5px; background-color: rgb(58, 56, 119);margin-left: 30px;margin-bottom: 10px;">
+                                    </div>
+
+                                    <ul>
+                                        <hr>
+                                        <li>
+                                            <a href=catagori.html>
+                                                <h5><i class="fa-solid fa-palette " style="color: #c8745f;"></i> 藝術學院
+                                                </h5>
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a href=education.html>
+                                                <h5><i class="fa-solid fa-book" style="color: #c8745f;"></i> 教育學院</h5>
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a href="Medical.html">
+                                                <h5><i class="fa-solid fa-kit-medical" style="color: #c8745f;"></i> 醫學院
+                                                </h5>
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a href=Science_and_engineering.html class="d-flex">
+                                                <h5><i class="fa-solid fa-flask" style="color: #c8745f;"></i> 理工學院</h5>
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a href="livelihood.html" class="d-flex">
+                                                <h5><i class="fa-solid fa-cookie-bite" style="color: #c8745f;"></i> 民生學院
+                                                </h5>
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <li>
+                                                <a href="fabric.html" class="d-flex">
+                                                    <h5><i class="fa-solid fa-shirt" style="color: #c8745f;"></i> 織品服裝學院
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </aside>
                             </aside>
-                        </aside>
-
                     </div>
                     <!-- 右 -->
-
                     <div class="col-xl-9 col-lg-8 col-md-6">
                         <div class="container">
                             <aside class="sidebar2">
-                                <h3 style="text-align: center;"> 藝術學院</h3>
-                                <div
-                                    style="width: 110px; height: 5px; background-color: rgb(187, 55, 55);margin: 0 auto;">
-                                </div>
-
-                                <div style="padding-bottom: 40px;"></div>
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <div class="single-cat text-center mb-50">
+                                    <!-- listing Details Stat-->
+                                    <div class="listing-details-area">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6 ">
+                                                    <div class="single-listing mb-30"
+                                                        style="background-color: rgb(245, 245, 245);">
+                                                        <div class="list-img">
+                                                            <img src="藝術1.jpg" alt="">
+                                                            <!-- <span>Open</span> -->
+                                                        </div>
+                                                        <div class="list-caption">
+                                                            <span><strong><a href="calander_art.html">預約</a></strong></span>
+                                                            <h5><B><a href=".html">Nuage數位多媒體整合系統</a></B></h5>
 
-                                            <a href="#">
-                                                <div class="cat-cap">
-                                                    <p style="font-size: 80%;"><a href="#">Nuage數位多媒體整合系統</a></p>
-                                                    <img src="藝術1.jpg" style="width:200px;">
-
+                                                            <div>
+                                                                <p>聯絡人: 廖紘億</p>
+                                                            </div>
+                                                            <div class="list-footer">
+                                                                <ul>
+                                                                    <li style="color: rgb(44, 44, 113);">分機 2377</li>
+                                                                    <li><a href="mailto:092029@mail.fju.edu.tw"
+                                                                            style="color: rgb(48, 48, 138);">092029@mail.fju.edu.tw</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <a href="#">
-                                                <div class="cat-cap">
-                                                    <p style="font-size: 80%;"><a href="#">史坦威鋼琴</a></p>
-                                                    <img src="藝術2.jpg" style="width:200px;">
+                                                <div class="col-lg-6 ">
+                                                    <div class="single-listing mb-30"
+                                                        style="background-color: rgb(245, 245, 245);">
+                                                        <div class="list-img">
+                                                            <img src="藝術2.jpg" alt="">
+                                                            <!-- <span>Open</span> -->
+                                                        </div>
+                                                        <div class="list-caption">
+                                                            <span>預約</span>
+                                                            <h5><B><a href=".html">史坦威鋼琴</a></B></h5>
+                                                            <p>聯絡人： 廖紘億</p>
+                                                            <div class="list-footer">
+                                                                <ul>
+                                                                    <li style="color: rgb(44, 44, 113);">分機 2377</li>
+                                                                    <li><a href="mailto:092029@mail.fju.edu.tw"
+                                                                            style="color: rgb(48, 48, 138);">092029@mail.fju.edu.tw</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
+                                                <div class="col-lg-6 ">
+                                                    <div class="single-listing mb-30"
+                                                        style="background-color: rgb(245, 245, 245);">
+                                                        <div class="list-img">
+                                                            <img src="藝術3.jpg" alt="">
+                                                            <!-- <span>Open</span> -->
+                                                        </div>
+                                                        <div class="list-caption">
+                                                            <span>預約</span>
+                                                            <h5><B><a href=".html">大圖掃圖機</a></B></h5>
+                                                            <p>聯絡人： 黃美娟</p>
+                                                            <div class="list-footer">
+                                                                <ul>
+                                                                    <li style="color: rgb(44, 44, 113);">分機 2392</li>
+                                                                    <li><a href="mailto:050946@mail.fju.edu.tw"
+                                                                            style="color: rgb(48, 48, 138);">092029@mail.fju.edu.tw</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                            <div class="cat-cap">
-                                                <p style="font-size: 80%;"><a href="#">大圖掃圖機</a></p>
-                                                <img src="藝術3.jpg" style="width:200px;">
-                                            </div>
                                         </div>
-                                    </div>
 
-                                </div>
-                                <h3 style="text-align: center;"> 教育學院</h3>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
+                                        </footer>
+                                        <!-- Scroll Up -->
+                                        <div id="back-top">
+                                            <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-bed"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Leving Hotel</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-food"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Resturent</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 style="text-align: center;"> 醫學院</h3>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 style="text-align: center;">理工學院</h3>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 style="text-align: center;"> 民生學院</h3>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 style="text-align: center;"> 織品學院</h3>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="single-cat text-center mb-50">
-                                            <div class="cat-icon">
-                                                <span class="flaticon-drink"></span>
-                                            </div>
-                                            <div class="cat-cap">
-                                                <h5><a href="#">Night Life</a></h5>
-                                                <p>Must explain your how this keind denoun pleasure</p>
-                                                <a href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- Categories Area End -->
-        <!-- Services Area Start -->
-        <div class="services-area pt-150 pb-150 section-bg" data-background="assets/img/gallery/section_bg02.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 text-center mb-80">
-                            <span>Easy to explore</span>
-                            <h2>How It Works</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-between">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-services text-center mb-50">
-                            <div class="services-icon">
-                                <span class="flaticon-list"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">1. Choose a Category</a></h5>
-                                <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
-                            </div>
-                            <!-- Shpape -->
-                            <img class="shape1 d-none d-lg-block" src="assets/img/icon/serices1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-services text-center mb-50">
-                            <div class="services-icon">
-                                <span class="flaticon-problem"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">2. what you want</a></h5>
-                                <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
-                            </div>
-                            <img class="shape2 d-none d-lg-block" src="assets/img/icon/serices2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-services text-center mb-50">
-                            <div class="services-icon">
-                                <span class="flaticon-respect"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">3. Go out & Explore</a></h5>
-                                <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services Area End -->
-        <!-- Popular Locations Start -->
-        <div class="popular-location section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-80">
-                            <span>Most visited places</span>
-                            <h2>Popular Locations</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location1.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>New York</p>
-                                <a href="#" class="location-btn">65 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location2.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Paris</p>
-                                <a href="#" class="location-btn">60 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location3.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Rome</p>
-                                <a href="#" class="location-btn">50 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location4.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Italy</p>
-                                <a href="#" class="location-btn">28 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location5.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Nepal</p>
-                                <a href="#" class="location-btn">99 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="assets/img/gallery/location6.png" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>indonesia</p>
-                                <a href="#" class="location-btn">78 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Locations End -->
-
-    </main>
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-area">
-            <div class="container">
-                <div class="footer-top footer-padding">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-                                    <!-- logo -->
-                                    <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Quick Link</h4>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Listing</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Categories</h4>
-                                    <ul>
-                                        <li><a href="#">Reasonable Hotel</a></li>
-                                        <li><a href="#">Popular Restaurant</a></li>
-                                        <li><a href="#">Easy Shopping</a></li>
-                                        <li><a href="#">Night Life</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Download App</h4>
-                                    <ul>
-                                        <li class="app-log"><a href="#"><img src="assets/img/gallery/app-logo.png"
-                                                    alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/gallery/app-logo2.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col-xl-9 col-lg-8">
-                            <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
-                                    This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4">
-                            <!-- Footer Social -->
-                            <div class="footer-social f-right">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
-    <!-- Scroll Up -->
-    <div id="back-top">
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-    </div>
 
 
-    <!-- JS here -->
-    <!-- All JS Custom Plugins Link Here here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+                                        <!-- JS here -->
+                                        <!-- All JS Custom Plugins Link Here here -->
+                                        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+                                        <!-- Jquery, Popper, Bootstrap -->
+                                        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+                                        <script src="./assets/js/popper.min.js"></script>
+                                        <script src="./assets/js/bootstrap.min.js"></script>
+                                        <!-- Jquery Mobile Menu -->
+                                        <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+                                        <!-- Jquery Slick , Owl-Carousel Plugins -->
+                                        <script src="./assets/js/owl.carousel.min.js"></script>
+                                        <script src="./assets/js/slick.min.js"></script>
+                                        <!-- One Page, Animated-HeadLin -->
+                                        <script src="./assets/js/wow.min.js"></script>
+                                        <script src="./assets/js/animated.headline.js"></script>
+                                        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Nice-select, sticky -->
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
+                                        <!-- Nice-select, sticky -->
+                                        <script src="./assets/js/jquery.nice-select.min.js"></script>
+                                        <script src="./assets/js/jquery.sticky.js"></script>
 
-    <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+                                        <!-- contact js -->
+                                        <script src="./assets/js/contact.js"></script>
+                                        <script src="./assets/js/jquery.form.js"></script>
+                                        <script src="./assets/js/jquery.validate.min.js"></script>
+                                        <script src="./assets/js/mail-script.js"></script>
+                                        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+                                        <!-- Jquery Plugins, main Jquery -->
+                                        <script src="./assets/js/plugins.js"></script>
+                                        <script src="./assets/js/main.js"></script>
+                                        <!-- bookstrapt -->
+                                        <script
+                                            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                                            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                                            crossorigin="anonymous"></script>
+                                        <script
+                                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+                                            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+                                            crossorigin="anonymous"></script>
 
 </body>
 
