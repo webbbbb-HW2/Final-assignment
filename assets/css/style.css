@@ -3920,6 +3920,10 @@ form.search-box .select2-selection--single{
     }
 }
 
+.listing-details-area .single-listing{
+    overflow: hidden;
+}
+
 .listing-details-area .single-listing .list-img {
     overflow: hidden;
     border-radius: 5px 5px 0 0
@@ -3927,6 +3931,7 @@ form.search-box .select2-selection--single{
 
 .listing-details-area .single-listing .list-img img {
     width: 100%;
+    height: 200px;
     transform: scale(1);
     transition: all 0.6s ease-out 0s
 }
@@ -3936,8 +3941,23 @@ form.search-box .select2-selection--single{
     padding: 31px 24px 18px 24px;
     border-top: 0;
     position: relative;
-    z-index: 0
+    z-index: 0;
 }
+
+.listing-details-area .single-listing .list-caption .target-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.listing-details-area .single-listing .list-caption a{
+    position: relative;
+    z-index: 3;
+}
+
 
 .listing-details-area .single-listing .list-caption span {
     color: #fff;
@@ -3952,6 +3972,20 @@ form.search-box .select2-selection--single{
     border-radius: 30px;
     text-align: center;
     line-height: 35px
+}
+
+.listing-details-area .single-listing .single-listing-title{
+    z-index: 100;
+    margin-top: 31px;
+    margin-left: 24px;
+}
+
+.single-listing-title a{
+    z-index: 5;
+}
+
+.listing-details-area .single-listing .single-listing-title a{
+    z-index: 5;
 }
 
 .listing-details-area .single-listing .list-caption h3 {
@@ -7221,7 +7255,17 @@ del {
     margin-bottom: 10px
 }
 
-/* Equipment */
-.equipment-box{
-    cursor: pointer;
+/* 預約器材 */
+
+.caption-title-slide{
+    position: relative;
+    animation-duration: 10s;
+    animation-name: caption-title-slide;
+    animation-fill-mode: forwards;
+}
+
+@keyframes caption-title-slide{
+    0% {margin-top: 10px;}
+    50% {margin-top: 0px;}
+    100% {margin-top: 100px; display: none;}
 }
