@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .progress {
-            width: 0%;
-            height: 3px;
-            background-color: red;
-            transition: width 0.5s ease;
-            /* 进度条动画效果 */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預約表單</title>
+<style>
+  
+  .container {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"] {
+
+    padding: 10px;
+    border: 1px solid #5f9bfb;
+    border-radius: 8px;
+
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
 </head>
-
 <body>
-    <ul>
-        <li>
-            <a href="catagori.html" onmouseover="startProgress('progress1')" onmouseout="resetProgress('progress1')">
-                <h5><i class="fa-solid fa-palette " style="color: #c8745f;"></i> 藝術學院</h5>
-                <div class="progress" id="progress1"></div>
-            </a>
-        </li>
-        <!-- 其他学院链接 -->
-    </ul>
-    <script>function startProgress(progressId) {
-            var progress = document.getElementById(progressId);
-            progress.style.width = '100%';
-        }
-
-        function resetProgress(progressId) {
-            var progress = document.getElementById(progressId);
-            progress.style.width = '0%';
-        }</script>
+  <div class="container">
+    <form>
+      <div>
+        預約時間:<input type="text"  placeholder="請輸入預約時間">
+      </div>
+      <div>
+        預約時間:<input type="text"  placeholder="請輸入預約時間">
+      </div>
+      <div>
+        預約時間:<input type="text"  placeholder="請輸入預約時間">
+      </div>
+      <button type="submit">提交預約</button>
+    </form>
+  </div>
 </body>
-
 </html>
