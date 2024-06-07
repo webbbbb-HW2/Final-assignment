@@ -3921,7 +3921,7 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing{
-    overflow: hidden;
+    width: 300px;
 }
 
 .listing-details-area .single-listing .list-img {
@@ -3938,7 +3938,6 @@ form.search-box .select2-selection--single{
 
 .listing-details-area .single-listing .list-caption {
     border: 1px solid #e1ebf7;
-    padding: 31px 24px 18px 24px;
     border-top: 0;
     position: relative;
     z-index: 0;
@@ -3951,6 +3950,93 @@ form.search-box .select2-selection--single{
     top: 0;
     left: 0;
     z-index: 1;
+    overflow: hidden;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title{
+    height: 90px;
+    margin-top: 21px;
+    overflow: hidden;
+    position: relative;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title .list-caption-title-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title .reservation-button-wrapper{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    z-index: 3;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 96px;
+    height: 100%;
+    background: #ff3d1c;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 35px ;
+}
+
+.list-caption .list-caption-title .list-caption-title-content.list-caption-title-slideIn{
+    animation-duration: 1s;
+    animation-name: list-caption-title-slideIn;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .list-caption-title .list-caption-title-content.list-caption-title-slideOut{
+    animation-duration: 0.8s;
+    animation-name: list-caption-title-slideOut;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .reservation-button-wrapper.reservation-button-slideIn{
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-name: reservation-button-slideIn;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .reservation-button-wrapper.reservation-button-slideOut{
+    animation-duration: 1s;
+    animation-name: reservation-button-slideOut;
+    animation-fill-mode: forwards;
+}
+
+@keyframes list-caption-title-slideIn{
+    0% {padding-top: 100px;}
+    100% {padding-top: 10px;}
+}
+
+@keyframes list-caption-title-slideOut{
+    0% {top: 10px ;}
+    20% {top: 0px ;}
+    100%{top: 90px ;}
+}
+
+@keyframes reservation-button-slideIn{
+    0% {top: 90px;}
+    100% {top: 21px;}
+}
+
+@keyframes reservation-button-slideOut{
+    0% {top: 21px}
+    100% {top: 90px}
 }
 
 .listing-details-area .single-listing .list-caption a{
@@ -3971,7 +4057,7 @@ form.search-box .select2-selection--single{
     background: #ff3d1c;
     border-radius: 30px;
     text-align: center;
-    line-height: 35px
+    line-height: 35px ;
 }
 
 .listing-details-area .single-listing .single-listing-title{
@@ -4018,7 +4104,8 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing .list-caption p {
-    color: #57667e
+    color: #57667e ;
+    padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -4028,19 +4115,24 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing .list-footer {
-    border-top: 1px solid #e1ebf7;
-    margin-top: 20px;
-    padding-top: 20px
-}
-
-.listing-details-area .single-listing .list-footer ul {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    justify-content: space-between
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #e1ebf7 ;
 }
 
-.listing-details-area .single-listing .list-footer ul li {
-    color: #727272;
-    font-size: 14px
+.listing-details-area .single-listing .list-footer p{
+    color: rgb(44, 44, 113);
+    margin-bottom: 0;
+}
+
+.listing-details-area .single-listing .list-footer a{
+    color: rgb(48, 48, 138);
+    z-index: 5;
 }
 
 .listing-details-area .single-listing:hover .list-img img {
@@ -7253,19 +7345,4 @@ del {
 
 .switch-wrap {
     margin-bottom: 10px
-}
-
-/* 預約器材 */
-
-.caption-title-slide{
-    position: relative;
-    animation-duration: 10s;
-    animation-name: caption-title-slide;
-    animation-fill-mode: forwards;
-}
-
-@keyframes caption-title-slide{
-    0% {margin-top: 10px;}
-    50% {margin-top: 0px;}
-    100% {margin-top: 100px; display: none;}
 }
