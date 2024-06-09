@@ -3921,6 +3921,7 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing{
+    position: relative;
     width: 300px;
 }
 
@@ -3940,10 +3941,9 @@ form.search-box .select2-selection--single{
     border: 1px solid #e1ebf7;
     border-top: 0;
     position: relative;
-    z-index: 0;
 }
 
-.listing-details-area .single-listing .list-caption .target-link{
+.listing-details-area .single-listing .target-link{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -3978,10 +3978,10 @@ form.search-box .select2-selection--single{
     justify-content: center;
     justify-items: center;
     justify-self: center;
-    z-index: 3;
 }
 
 .listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button{
+    position: relative;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -3991,6 +3991,14 @@ form.search-box .select2-selection--single{
     border-radius: 30px;
     text-align: center;
     line-height: 35px ;
+    z-index: 3;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button a{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .list-caption .list-caption-title .list-caption-title-content.list-caption-title-slideIn{
@@ -7345,4 +7353,21 @@ del {
 
 .switch-wrap {
     margin-bottom: 10px
+}
+
+.main-content{
+    margin-left: 50px;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+}
+
+.single_sidebar_widget hr{
+    margin: 25px 0;
+    border: 1px solid rgba(100, 133, 165, 0.2);
 }
