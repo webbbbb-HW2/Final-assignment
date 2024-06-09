@@ -3923,6 +3923,7 @@ form.search-box .select2-selection--single{
 .listing-details-area .single-listing{
     position: relative;
     width: 300px;
+    border: 1px solid gray;
 }
 
 .listing-details-area .single-listing .list-img {
@@ -3992,6 +3993,10 @@ form.search-box .select2-selection--single{
     text-align: center;
     line-height: 35px ;
     z-index: 3;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button:hover a{
+    color : #ffe9a2;
 }
 
 .listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button a{
