@@ -241,11 +241,7 @@
             animation: rotate 7s linear infinite;
         }
 
-        .write {
-            margin-ri: 50px;
-
-        }
-
+       
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
@@ -370,7 +366,7 @@
 
                             </div>
                             <h3 style="text-align: center;"><B>1、登入</B></h3>
-                            <h4 style="text-align: center;"> 點此登入</h4>
+                            <h5 style="text-align: center;"> <a href="LogIn_and_SignUp.htm">點此登入</a></h5>
                         </div>
 
                         <div class="col-3">
@@ -382,7 +378,7 @@
                                 </div>
                             </div>
                             <h3 style="text-align: center;"><B>2、檢查日曆</B></h3>
-                            <h4 style="text-align: center;"> 已被預約的時間</h4>
+                            <h5 style="text-align: center;"> 日曆於左下</h5>
                         </div>
 
                         <div class="col-3">
@@ -392,7 +388,7 @@
                                 </div>
                             </div>
                             <h3 style="text-align: center;margin-left: 35px;"><B>3、填預約表單</B></h3>
-                            <h4 style="text-align: center;margin-left: 35px;"> 姓名、系所、時間</h4>
+                            <h5 style="text-align: center;margin-left: 35px;"> 日期、時間、系所</h5>
                         </div>
 
                     </div>
@@ -422,10 +418,10 @@
                             <hr>
                             <ul>
 
-
-                                <li style="color: #fb7e11;">點你想預約的日期確認預約狀況</li>
-                                <li style="color: #fb7e11;">紅字代表此日期有人預約</li>
+                                <li style="color: #fb7e11;">*點你想預約的日期確認預約狀況*</li>
+                                <li style="color: #fb7e11;">*紅字代表此日期有人預約*</li>
                             </ul>
+                            <hr>
                         </div>
 
                         <!-- Modal -->
@@ -445,7 +441,7 @@
                 <div class="right-side">
                     <div class="calendar">
                         <div class="calendar-header">
-                            <h2><b style="text-align: center;">設備預約表單</b></h2>
+                            <h3 style="margin: auto; font-family: 'SimHei';"><b>預約表單</b></h3>
                         </div>
                         <form action="/submit_reservation" method="post"
                             style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -457,19 +453,17 @@
                             </div>
                             <div style="margin-bottom: 15px;">
                                 <label for="reservation-time"
-                                    style="display: block; margin-bottom: 5px; font-weight: bold;">預約時間：</label>
+                                    style="display: block; margin-bottom: 5px; font-weight: bold;">預約起始時間：</label>
                                 <input type="time" id="reservation-time" name="reservation-time" required
                                     style="width: 100%; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 4px;">
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <label for="payment-method"
-                                    style="display: block; margin-bottom: 5px; font-weight: bold;">付款方式：</label>
-                                <select id="payment-method" name="payment-method" required
+                                <label for="reservation-time"
+                                    style="display: block; margin-bottom: 5px; font-weight: bold;">預約結束時間：</label>
+                                <input type="time" id="reservation-time" name="reservation-time" required
                                     style="width: 100%; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 4px;">
-                                    <option value="credit-card">信用卡</option>
-                                    <option value="linepay">LinePay</option>
-                                </select>
                             </div>
+                            
                             <div style="margin-bottom: 15px;">
                                 <label for="department"
                                     style="display: block; margin-bottom: 5px; font-weight: bold;">租借系所：</label>
@@ -477,7 +471,7 @@
                                     style="width: 100%; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 4px;">
                             </div>
                             <button type="submit"
-                                style="width: 100%; padding: 10px; font-size: 18px; background-color: #ffc0c0; color: white; border: none; border-radius: 4px; cursor: pointer;">提交預約</button>
+                                style="width: 100%; padding: 10px; font-size: 18px; background-color: #ffc0c0; color: white; border: none; border-radius: 4px; cursor: pointer;"><a href="pay.html">提交預約及繳費</a></button>
                         </form>
                     </div>
                 </div>
