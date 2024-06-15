@@ -1,132 +1,472 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Interactive Calendar</title>
-      <style>
-          .calendar {
-              width: 300px;
-              margin: 0 auto;
-          }
-          .calendar-header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-          }
-          .days {
-              display: flex;
-              flex-wrap: wrap;
-          }
-          .day {
-              width: calc(100% / 7);
-              height: 50px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              cursor: pointer;
-          }
-          .modal {
-              display: none;
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: rgba(0, 0, 0, 0.5);
-              justify-content: center;
-              align-items: center;
-          }
-          .modal-content {
-              background: white;
-              padding: 20px;
-              border-radius: 5px;
-          }
-          .modal-content p {
-              margin: 0;
-          }
-      </style>
-  </head>
-  <body>
-      <div class="calendar">
-          <div class="calendar-header">
-              <button onclick="prevMonth()">Prev</button>
-              <h3 id="monthYear"></h3>
-              <button onclick="nextMonth()">Next</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待辦事項日曆</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- bookstrapt -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid #ddd;
+      /* 表格整體邊框 */
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      /* 表格行之間的邊框 */
+    }
+
+    th {
+      background-color: #9ac6ea;
+      /* 表頭背景色 */
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+      /* 偶數行背景色 */
+    }
+
+    tr:hover {
+      background-color: #ddd;
+      /* 滑鼠懸停時的背景色 */
+    }
+
+    /* styles.css */
+    body {
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      /* 去除預設的頁面邊距 */
+    }
+
+    .calendar {
+      margin: 0px;
+      width: 600px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(247, 14, 14, 0.1);
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .calendar-body {
+      padding: 10px;
+    }
+
+    .day-names {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .days {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .days div {
+      width: calc(100% / 7);
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .days div:hover {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .prev-date,
+    .next-date {
+      color: #b1dbec;
+    }
+
+    .has-task {
+      color: red;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 5px;
+    }
+
+    .close {
+      color: #2c56d2;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+
+    }
+
+    .grey-box {
+      width: 900px;
+      height: 200px;
+      background-color: #f0f0f0;
+      /* 調整灰色 */
+      border-radius: 10px;
+      /* 調整圓角 */
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    /* 調整內容樣式 */
+
+
+    .top-section {
+
+      height: 500px;
+      /* 上方部分占整個頁面的20% */
+      background-color: #f9f6f6;
+      /* 調整灰色 */
+      border-radius: 10px;
+      /* 調整圓角 */
+      padding:50px;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    .bottom-section {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      /* 下方部分占据剩余空间 */
+    }
+
+    .left-side,
+    .right-side {
+      flex: 1;
+      /* 左右兩側占据相等的空间 */
+      background-color: #ffffff;
+      /* 調整灰色 */
+      border-radius: 10px;
+      /* 調整圓角 */
+      padding: 20px;
+      margin-right: 10px;
+    }
+    .circle-container {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            margin-left:75px;
+            /* Adjust spacing between circles */
+        }
+
+        .circle {
+            width: 100%;
+            height: 100%;
+            background-color: #f9e3e3;
+            /* Light blue color */
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle:before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            border: 2px dashed #4856f1;
+            border-radius: 50%;
+            animation: rotate 7s linear infinite;
+        }
+        .write{
+          margin-ri: 50px;
+
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon {
+            font-size: 32px;
+        }
+
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -10;
+            }
+        }
+  </style>
+</head>
+
+<body>
+  <!-- As a heading -->
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+    <div class="container-fluid">
+      <h2 style="text-align:center; color: #f2f2f2; font-family: 'Roboto', sans-serif; font-weight: 700;"><i
+          class="fa-regular fa-calendar-days" style="color: #b9ddf8;"></i> 預約<span style="font-size: medium;"> -
+          Nuage數位多媒體整合系統</span></h2>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="top-section">
+      <h2 style=" text-align: center;"><b>- 預約流程 -</b></h2>
+      <hr>
+      <div  style="margin-left: 200px;">
+        <div class="row">
+          <div class="col-3">
+            <div class="circle-container">
+                <div class="circle">
+                    <div class="icon"><i class="fa-solid fa-right-to-bracket" style="color: #2157b5;"></i></div>
+                </div>
+             
+              </div>
+              <h3 style="text-align: center;"><B>1、登入</B></h3>
+              <h4 style="text-align: center;"> 點此登入</h4>
           </div>
-          <div class="days" id="calendarDays"></div>
-      </div>
-  
-      <div class="modal" id="modal">
-          <div class="modal-content">
-              <span onclick="closeModal()" style="cursor:pointer;">&times;</span>
-              <p id="modalText"></p>
+          
+          <div class="col-3">
+            <div class="circle-container">
+                <div class="circle">
+                    <div class="icon"><i class="fa-regular fa-calendar-check" style="color: #2157b5;"></i></div>
+                </div>
+            </div>
+            <h3 style="text-align: center;"><B>2、檢查日曆</B></h3>
+                <h4 style="text-align: center;"> 已被預約的時間</h4>
           </div>
+        
+          <div class="col-3">
+            <div class="circle-container"style="text-align: center;">
+                <div class="circle">
+                    <div class="icon"><i class="fa-solid fa-pencil" style=" color: #2157b5;"></i></div>
+                </div>
+            </div>
+            <h3   style="text-align: center;margin-left: 35px;"><B>3、填預約表單</B></h3>
+              <h4 style="text-align: center;margin-left: 35px;"> 姓名、系所、時間</h4>
+          </div>
+         
+        </div>
       </div>
-  
-      <script>
-          const monthNames = ["January", "February", "March", "April", "May", "June",
-              "July", "August", "September", "October", "November", "December"];
-          let currentMonth = new Date().getMonth();
-          let currentYear = new Date().getFullYear();
-  
-          function renderCalendar(month, year) {
-              const calendarDays = document.getElementById('calendarDays');
-              const monthYear = document.getElementById('monthYear');
-              calendarDays.innerHTML = '';
-              monthYear.innerText = `${monthNames[month]} ${year}`;
-  
-              const firstDay = new Date(year, month, 1).getDay();
-              const daysInMonth = new Date(year, month + 1, 0).getDate();
-  
-              for (let i = 0; i < firstDay; i++) {
-                  const emptyDay = document.createElement('div');
-                  emptyDay.classList.add('day');
-                  calendarDays.appendChild(emptyDay);
-              }
-  
-              for (let i = 1; i <= daysInMonth; i++) {
-                  const day = document.createElement('div');
-                  day.classList.add('day');
-                  day.innerText = i;
-                  day.onclick = () => openModal(i);
-                  calendarDays.appendChild(day);
-              }
+      <hr>
+    </div>
+    <div class="bottom-section">
+      <div class="left-side">
+        <!-- As a link -->
+            <div class="calendar">
+              <div class="calendar-header">
+                <button id="prevMonth"><b style="background-color: #f5c8bb;">上個月</b></button>
+                <h2 id="monthYear"></h2>
+                <button id="nextMonth"><b style="background-color: #f5c8bb;">下個月</b></button>
+              </div>
+              <div class="calendar-body">
+                <div class="day-names">
+                  <div>Sun</div>
+                  <div>Mon</div>
+                  <div>Tue</div>
+                  <div>Wed</div>
+                  <div>Thu</div>
+                  <div>Fri</div>
+                  <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+              </div>
+
+          <!-- Modal -->
+          <div id="taskModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4><i class="fa-solid fa-calendar-days" style="color: #74C0FC;"></i> 預約情況</h4>
+              <hr>
+              <div id="taskDetails"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="right-side">
+        <div class="calendar">
+          
+        </div>
+      </div>
+    </div>
+    <!-- font Awesone -->
+    <script src="https://kit.fontawesome.com/24049ba7cf.js" crossorigin="anonymous"></script>
+    <script>
+      // script.js
+      document.addEventListener('DOMContentLoaded', () => {
+        const daysContainer = document.getElementById('days');
+        const monthYear = document.getElementById('monthYear');
+        const prevMonthBtn = document.getElementById('prevMonth');
+        const nextMonthBtn = document.getElementById('nextMonth');
+        const taskModal = document.getElementById('taskModal');
+        const closeModalBtn = document.getElementsByClassName('close')[0];
+        const taskDetails = document.getElementById('taskDetails');
+
+        let currentDate = new Date();
+
+        function renderCalendar(date) {
+          date.setDate(1);
+          const monthDays = date.getDay();
+          const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+
+          const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+          const nextDays = 42 - (monthDays + lastDay);
+
+          monthYear.innerHTML = date.toLocaleDateString('en-us', { month: 'long', year: 'numeric' });
+
+          let days = '';
+
+          for (let x = monthDays; x > 0; x--) {
+            days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
           }
-  
-          function prevMonth() {
-              if (currentMonth === 0) {
-                  currentMonth = 11;
-                  currentYear--;
-              } else {
-                  currentMonth--;
-              }
-              renderCalendar(currentMonth, currentYear);
+
+          for (let i = 1; i <= lastDay; i++) {
+            let hasTask = getTaskForDay(i) ? 'has-task' : '';
+
+            // 在這裡添加條件判斷以確定日期是否是指定日期（5月1號和5號）
+            if (date.getMonth() === 4 && (i === 1 || i === 5)) {
+              hasTask += ' special-date'; // 添加一個名為 special-date 的額外類
+            }
+
+            days += `<div class="${hasTask}">${i}</div>`;
           }
-  
-          function nextMonth() {
-              if (currentMonth === 11) {
-                  currentMonth = 0;
-                  currentYear++;
-              } else {
-                  currentMonth++;
-              }
-              renderCalendar(currentMonth, currentYear);
+
+          for (let j = 1; j <= nextDays; j++) {
+            days += `<div class="next-date">${j}</div>`;
           }
-  
-          function openModal(day) {
-              const modal = document.getElementById('modal');
-              const modalText = document.getElementById('modalText');
-              modalText.innerText = `You clicked on ${monthNames[currentMonth]} ${day}, ${currentYear}`;
-              modal.style.display = 'flex';
+
+          daysContainer.innerHTML = days;
+
+          const dayElements = daysContainer.querySelectorAll('div:not(.prev-date):not(.next-date)');
+          dayElements.forEach(day => {
+            day.addEventListener('click', () => {
+              const dayNum = day.innerText;
+              const task = getTaskForDay(dayNum); // 假設有一個函數可以獲取特定日期的任務
+              taskDetails.innerHTML = `<p>${task ? task : '此日還沒有人預約'}</p>`;
+              taskModal.style.display = 'block';
+            });
+          });
+        }
+
+        function getTaskForDay(day) {
+          // 這是一個範例函數，你可以根據需要修改，從實際的數據源獲取任務
+          const tasks = {
+            1: [
+              { name: '蔡宜純', department: '服裝設計系', time: '10 AM', details: '1 PM' },
+              { name: '李政昕 ', department: ' 織品系', time: '2 PM', details: '3 PM' }
+            ],
+            5: [
+              { name: '陳祺聖', department: ' 應用美術系', time: '1 PM', details: '2 PM' },
+              { name: '李政昕', department: ' 織品系', time: '4 PM', details: '6 PM' },
+              { name: '黃瓊慧', department: '服裝設計系', time: '7 PM', details: '10 PM' }
+            ]
+          };
+
+
+          const taskInfo = tasks[day];
+          if (taskInfo) {
+            // 如果有任務，構建表格來顯示任務信息
+            let tableHTML = '<table>';
+            tableHTML += '<tr><th>姓名</th><th>系所</th><th>借出時間</th><th>歸還時間</th></tr>';
+            taskInfo.forEach(task => {
+              tableHTML += `<tr><td>${task.name}</td><td>${task.department}</td><td>${task.time}</td><td>${task.details}</td></tr>`;
+            });
+            tableHTML += '</table>';
+            return tableHTML;
+          } else {
+            return null; // 如果沒有任務，返回 null
           }
-  
-          function closeModal() {
-              const modal = document.getElementById('modal');
-              modal.style.display = 'none';
+        }
+
+        renderCalendar(currentDate);
+
+        prevMonthBtn.addEventListener('click', () => {
+          currentDate.setMonth(currentDate.getMonth() - 1);
+          renderCalendar(currentDate);
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+          currentDate.setMonth(currentDate.getMonth() + 1);
+          renderCalendar(currentDate);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+          taskModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+          if (event.target === taskModal) {
+            taskModal.style.display = 'none';
           }
-  
-          renderCalendar(currentMonth, currentYear);
-      </script>
-  </body>
-  </html>
+        });
+      });
+
+
+
+    </script>
+    <!-- bookstrapt -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
