@@ -7347,7 +7347,6 @@ del {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    cursor: pointer;
 }
 
 .reservation-row{
