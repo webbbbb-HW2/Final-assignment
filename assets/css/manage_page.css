@@ -1,14 +1,30 @@
 .sidebar {
-    position: absolute; /* 初始狀態為絕對定位 */
-    top: 80px; /* 初始位置距離頂部的距離 */
-    left: 20px; /* 距離左邊的距離 */
-    width: 220px; /* sidebar的寬度 */
-    padding: 20px; /* 內距 */
-    background-color: white; /* 背景顏色 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-    border-radius: 10px; /* 圓角 */
-    max-height: calc(100vh - 100px); /* 限制sidebar的最大高度，防止超出視窗 */
-    transition: top 0.3s ease; /* 平滑過渡效果 */
+    position: sticky;
+    top: 100px;
+    left: 20px;
+    width: 220px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: auto;
+    max-height: 80vh; 
+
+}
+
+/* 當屏幕寬度小於685px時隱藏sidebar */
+@media (max-width: 685px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 999px) {
+    .sidebar {
+        display: none;
+    }
 }
 
 .profile-img {

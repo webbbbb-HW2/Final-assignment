@@ -228,3 +228,23 @@ document.addEventListener('DOMContentLoaded', function() {
     generateUserCards(users);
 });
 
+
+//頁面滾動
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebarLinks = document.querySelectorAll(".sidebar a");
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            const headerOffset = 80; // 偏移量，確保滾動後內容不被頂部遮擋
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        });
+    });
+});
