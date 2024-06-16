@@ -137,7 +137,7 @@ function generateUserCards(users) {
         h2.classList.add('mb-0');
 
         const button = document.createElement('button');
-        button.classList.add('btn', 'btn-link', 'btn-block', 'text-left', 'collapsed');
+        button.classList.add('custom-button'); // 使用新的樣式類
         button.type = 'button';
         button.setAttribute('data-toggle', 'collapse');
         button.setAttribute('data-target', `#collapse${index}`);

@@ -106,3 +106,48 @@
 .profile-details .profile-info > *:last-child {
     margin-bottom: 0;
 }
+
+.custom-button {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    color: #858585;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.custom-button:hover {
+    color: #606060;
+    transform: translateY(-2px);
+}
+
+.approve-button, .reject-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.approve-button {
+    background-color: #8f8e8e; 
+}
+
+.reject-button {
+    background-color: #666464; 
+}
+
+.approve-button:hover, .reject-button:hover {
+    color: black;
+    transform: translateY(-2px);
+}

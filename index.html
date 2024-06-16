@@ -10,20 +10,20 @@
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-		<!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/slicknav.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/select2.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-   </head>
+	<!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
+   </head>
    <body>
     <!-- Preloader Start -->
     <div id="preloader-active">
@@ -57,7 +57,7 @@
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="index.html">首頁</a></li>
                                             <li>
-                                                <a href="reservation_html/reservation_all.html">器材預約</a>
+                                                <a href="reservation_html/reservation_all.html">儀器預約</a>
                                                 <ul ul class="submenu">
                                                     <li><a href="reservation_html/reservation_all.html">全部學院</a></li>
                                                     <li><a href="reservation_html/reservation_art.html">藝術學院</a></li>
@@ -68,6 +68,8 @@
                                                     <li><a href="reservation_html/reservation_textiles.html">織品服裝學院</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a href="manager_page.html">管理者介面</a></li>
+                                            <li><a href="usre_page.html">使用者介面</a></li>
                                             <li><a href="contact.html">聯絡我們</a></li>
                                             <li class="login"><a href="LogIn_and_SignUp.htm">
                                                 <i class="ti-user"></i> 登入與註冊</a>
@@ -89,119 +91,161 @@
     </header>
     <main>
 
-        <!-- Hero Area Start-->
-        <div class="slider-area hero-overly">
-            <div class="single-slider hero-overly  slider-height d-flex align-items-center">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-8 col-lg-9">
-                            <!-- Hero Caption -->
-                            <div class="hero__caption">
-                                <span>輔仁大學</span>
-                                <h1>貴重儀器預約系統</h1>
-                            </div>
-                            <!--Hero form -->
-                            <form action="#" class="search-box">
-                                <div class="search-equipment-form">
-                                    <select id="search-equipment" data-select2-id="1">
-                                        <optgroup label="輸入點什麼">
-                                            <option value="1">option1</option>
-                                            <option value="2">option2</option>
-                                            <option value="3">option3</option>  
-                                        </optgroup>
-                                    </select>
-                                </div>
-                                <div class="search-form">
-                                    <a href="#">Search</a>
-                                </div>
-                            </form>	
+    <!-- Hero Area Start-->
+    <div class="slider-area hero-overly">
+        <div class="single-slider hero-overly  slider-height d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-9">
+                        <!-- Hero Caption -->
+                        <div class="hero__caption">
+                            <span>輔仁大學</span>
+                            <h1>貴重儀器預約系統</h1>
                         </div>
+                        <!--Hero form -->
+                        <form action="#" class="search-box">
+                            <div class="search-equipment-form">
+                                <select id="search-equipment" data-select2-id="1">
+                                    <optgroup label="藝術學院">
+                                        <option value="1">Nuage數位多媒體整合系統</option>
+                                        <option value="2">史坦威鋼琴</option>
+                                        <option value="3">大圖掃圖機</option>  
+                                    </optgroup>
+                                    <optgroup label="教育學院">
+                                        <option value="4">加壓冷療恢復機</option>
+                                        <option value="5">攜帶式能量代謝系統</option>
+                                        <option value="6">測力板</option>
+                                        <option value="7">等速肌力測試評估儀</option>
+                                        <option value="8">高精度無線腦波系統</option>
+                                    </optgroup>
+                                    <optgroup label="醫學院">
+                                        <option value="9">ImageXpress Micro 高內含影像分析系統</option>
+                                        <option value="10">Luminex 200多功能螢光生物分子多重分析系統</option>
+                                        <option value="11">全方位智慧型電流輸出電轉殖儀</option>
+                                        <option value="12">動物學習與記憶測試組</option>
+                                        <option value="13">呼吸模擬器組</option>
+                                        <option value="14">微流體電泳分析儀</option>
+                                        <option value="15">微電極陣列電生理系統</option>
+                                        <option value="16">成人全功能型呼吸器</option>
+                                        <option value="17">次世代高通量核酸定序系統(超高速半導體基因定序儀)</option>
+                                        <option value="18">穿透式電子顯微鏡</option>
+                                        <option value="19">血管顯微影像觀察紀錄系統</option>
+                                        <option value="20">高速流式細胞分選儀</option>
+                                    </optgroup>
+                                    <optgroup label="理工學院">
+                                        <option value="21">三維生物列印機</option>
+                                        <option value="22">動態機械性質分析儀</option>
+                                        <option value="23">原子放光光譜儀</option>
+                                        <option value="24">多模式微波反應系統</option>
+                                        <option value="25">影像轉檔分析軟體、逆向工程軟體</option>
+                                        <option value="26">拉曼系統</option>
+                                        <option value="27">毛細管電泳儀</option>
+                                        <option value="28">氣相質量選擇偵測器</option>
+                                        <option value="29">流式細胞儀</option>
+                                        <option value="30">流式細胞分析儀</option>
+                                        <option value="31">雷射掃描共軛焦分光光譜顯微平台</option>
+                                        <option value="32">高階數位示波器</option>
+                                    </optgroup>
+                                    <optgroup label="民生學院">
+                                        <option value="33">ST-5流動層逆洗式噴霧乾燥造粒機</option>
+                                        <option value="34">多色螢光與冷光影像系統</option>
+                                        <option value="35">桌上型掃描電子顯微鏡</option>
+                                        <option value="36">聚合酶連鎖反應分析儀</option>
+                                        <option value="37">豆腐系統製造設備（含包裝）</option>
+                                    </optgroup>
+                                    <optgroup label="織品服裝學院">
+                                        <option value="38">液態水分管理測試儀</option>
+                                        <option value="39">電腦輔助橫編機設計系統</option>
+                                        <option value="40">電腦鞋面橫編機設計系統</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="search-form">
+                                <a href="#">Search</a>
+                            </div>
+                        </form>	
                     </div>
                 </div>
-
             </div>
+
         </div>
-        <!--Hero Area End-->
-    </main>
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-area">
-            <div class="container">
-               <div class="footer-top footer-padding">
-                    <div class="footer-content">
-                        <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6" style="place-content: center; align-self: center; justify-self: center;">
-                    <div class="footer-content">
-                        <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6" style="place-content: center; align-self: center; justify-self: center;">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <ul>
-                                        <li><h4>Quick Link</h4></li>
-                                        <li><a href="#">首頁</a></li>
-                                        <li><a href="#">預約狀況</a></li>
-                                        <li><a href="#">預約儀器</a></li>
-                                        <li><a href="#">聯絡我們</a></li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-FJU">
+    </div>
+    <!--Hero Area End-->
+</main>
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-area">
+        <div class="container">
+           <div class="footer-top footer-padding">
+                <div class="footer-content">
+                    <div class="footer-tittle">
+                        <ul>
+                            <li><h4>Quick Link</h4></li>
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="reservation_html/reservation_all.html">儀器預約</a></li>
+                            <li><a href="usre_page.html">使用者介面</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                    </div>
+                    <div class="footer-FJU">
                             <p>© 2024 輔仁大學 - 貴重儀器預約系統</p>
                     </div>
-               </div>
-            </div>
+                </div>
+           </div>
         </div>
-        <!-- Footer End-->
-    </footer>
-    <!-- Scroll Up -->
-    <div id="back-top" >
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
+    <!-- Footer End-->
+</footer>
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
 
-    <!-- JS here -->
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+<!-- JS here -->
+	<!-- All JS Custom Plugins Link Here here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<!-- Jquery, Popper, Bootstrap -->
+	<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+	<!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+	<!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+	<script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-		<!-- Nice-select, sticky -->
-		<script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
+	<!-- Nice-select, sticky -->
+	<script src="./assets/js/jquery.sticky.js"></script>
+    
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+	<!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
-        <!-- Select2 -->
-        <script src="./assets/js/select2.min.js"></script>
-        
-        <script>
-            $(function(){
-                $("#search-equipment").select2({
-                    language: 'zh-TW',
-                    width: '100%',
-                    maximumInputLength: 10,
-                    minimumInputLength: 0,
-                    tags: true,
-                }) ;
+    <!-- Select2 -->
+    <script src="./assets/js/select2.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("#search-equipment").select2({
+                language: 'zh-TW',
+                width: '100%',
+                maximumInputLength: 10,
+                minimumInputLength: 0,
+                tags: true,
             }) ;
-        </script>
-    </body>
-</html>
+        }) ;
+    </script>
+
+</body>

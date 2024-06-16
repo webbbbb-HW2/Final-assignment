@@ -2765,7 +2765,7 @@ form.search-box .select2-selection--single{
 }
 
 .slider-height {
-    min-height: 890px;
+    min-height: 1000px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover
@@ -4385,7 +4385,7 @@ form.search-box2 .search-form a {
     background-image: url(../img/gallery/footer_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat ;
-    height: 150px;
+    height: 200px;
 }
 
 .footer-area .footer-logo {
@@ -4476,82 +4476,13 @@ form.search-box2 .search-form a {
     color: #8ba4b1
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .footer-area .footer-social {
-        float: left;
-        padding-top: 10px
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .footer-area .footer-social {
-        float: left;
-        padding-top: 10px
-    }
-}
-
-@media (max-width: 575px) {
-    .footer-area .footer-social {
-        float: left;
-        padding-top: 10px
-    }
-}
-
-.footer-area .footer-social a {
-    color: #8ba4b1;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 14px;
-    border: 1px solid #e5e5e5;
-    line-height: 40px;
-    display: inline-block;
-    text-align: center;
-    margin-left: 8px
-}
-
-.footer-area .footer-social a i {
-    display: inline-block
-}
-
-.footer-area .footer-social a:hover {
-    background: #eb566c;
-    border: 1px solid transparent;
-    color: #fff
-}
-
-.footer-area .footer-bottom {
-    border-top: 1px solid #1c2e4c;
-    padding: 40px 0px 23px
-}
-
-@media (max-width: 575px) {
-    .footer-area .footer-bottom {
-        padding: 35px 0px 20px
-    }
-}
-
-.footer-area .footer-bottom .footer-copy-right p {
-    color: #8ba4b1;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 2;
-    margin-bottom: 12px
-}
-
-.footer-area .footer-bottom .footer-copy-right p i {
-    color: #eb566c
-}
-
-.footer-area .footer-bottom .footer-copy-right p a {
-    color: #eb566c
-}
-
 .footer-content{
     display: grid;
-    padding-top: 50px;
-    grid-template-rows: 20px 20px;
-    gap: 10px;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+    padding-top: 35px;
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
 }
 
 .footer-FJU{
@@ -7430,7 +7361,7 @@ del {
 
 .mobile-sidebar .other-department div:first-child{
     grid-column: span 2;
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width:1200px){
@@ -7445,4 +7376,13 @@ del {
     .mobile-sidebar{
         display: block;
     }
+}
+
+.calendar form button a{
+    text-decoration: none;
+    color: black;
+}
+
+.calendar form button a:hover{
+    color: #FD5468;
 }
