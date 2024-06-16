@@ -29,6 +29,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <style>
+        .a{
+            text-decoration: none;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -285,25 +288,25 @@
         <!-- Header Start -->
         <div class="header-area header-transparent">
             <div class="main-header">
-                <div class="header-bottom  header-sticky">
+               <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                    <a href="index.html"><img src="../assets/img/logo/logo.png" alt=""
-                                            style="max-height: 70px;"></a>
+                                  <a href="../index.html"><img src="../assets/img/logo/logo.png" alt="" style="max-height: 70px;"></a>
                                 </div>
                             </div>
                             <div class="col-xl-8">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation">
+                                        <ul id="navigation">                                                                                                                                     
                                             <li><a href="../index.html">首頁</a></li>
                                             <li>
-                                                <a href="reservation_art.html">器材預約</a>
+                                                <a href="reservation_all.html">器材預約</a>
                                                 <ul ul class="submenu">
+                                                    <li><a href="reservation_all.html">全部學院</a></li>
                                                     <li><a href="reservation_art.html">藝術學院</a></li>
                                                     <li><a href="reservation_education.html">教育學院</a></li>
                                                     <li><a href="reservation_medical.html">醫學院</a></li>
@@ -312,9 +315,11 @@
                                                     <li><a href="reservation_textiles.html">織品服裝學院</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a href="../manager_page.html">管理者介面</a></li>
+                                            <li><a href="../usre_page.html">使用者介面</a></li>
                                             <li><a href="../contact.html">聯絡我們</a></li>
-                                            <li class="login"><a href="../LogIn_and_SignUp.htm">
-                                                    <i class="ti-user"></i> 登入與註冊</a>
+                                            <li class="login"><a href="../Login_and_Signup.htm">
+                                                <i class="ti-user"></i> 登入與註冊</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -326,9 +331,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+               </div>
             </div>
-        </div>
+       </div>
         <!-- Header End -->
     </header>
     <main>
@@ -472,7 +477,7 @@
                                     style="width: 100%; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 4px;">
                             </div>
                             <button type="submit"
-                                style="width: 100%; padding: 10px; font-size: 18px; background-color: #ffc0c0; color: white; border: none; border-radius: 4px; cursor: pointer;"><a href="pay.html">提交預約及繳費</a></button>
+                                style="width: 100%; padding: 10px; font-size: 18px; background-color: #ffc0c0; color: white; border: none; border-radius: 4px; cursor: pointer;"><a href="../pay.html">提交預約及繳費</a></button>
                         </form>
                     </div>
                 </div>
@@ -609,32 +614,28 @@
         <!-- Footer Start-->
         <div class="footer-area">
             <div class="container">
-                <div class="footer-top footer-padding">
+               <div class="footer-top footer-padding">
                     <div class="footer-content">
-                        <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6"
-                            style="place-content: center; align-self: center; justify-self: center;">
-                            <div class="footer-content">
-                                <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6"
-                                    style="place-content: center; align-self: center; justify-self: center;">
-                                    <div class="single-footer-caption mb-50">
-                                        <div class="footer-tittle">
-                                            <ul>
-                                                <li>
-                                                    <h4>Quick Link</h4>
-                                                </li>
-                                                <li><a href="../index.html">首頁</a></li>
-                                                <li><a href="reservation_art.html">預約儀器</a></li>
-                                                <li><a href="../contact.html">聯絡我們</a></li>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer-FJU">
-                                    <p>© 2024 輔仁大學 - 貴重儀器預約系統</p>
+                        <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6" style="place-content: center; align-self: center; justify-self: center;">
+                    <div class="footer-content">
+                        <div class="row-xl-2 row-lg-2 row-md-4 row-sm-6" style="place-content: center; align-self: center; justify-self: center;">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <ul>
+                                        <li><h4>Quick Link</h4></li>
+                                        <li><a href="../index.html">首頁</a></li>
+                                        <li><a href="reservation_all.html">預約儀器</a></li>
+                                        <li><a href="../contact.html">聯絡我們</a></li>
                                 </div>
                             </div>
                         </div>
+                        <div class="footer-FJU">
+                            <p>© 2024 輔仁大學 - 貴重儀器預約系統</p>
                     </div>
-                    <!-- Footer End-->
+               </div>
+            </div>
+        </div>
+        <!-- Footer End-->
     </footer>
     <!-- Scroll Up -->
     <div id="back-top">
