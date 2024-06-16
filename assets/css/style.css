@@ -2727,10 +2727,20 @@ form.search-box .select2-selection--single{
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px
     }
+    .slider-area form.search-box .search-equipment-form {
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px
+    }
 }
 
 @media (max-width: 575px) {
     .slider-area form.search-box .search-form {
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px
+    }
+    .slider-area form.search-box .search-equipment-form {
         width: 100%;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px
@@ -5287,30 +5297,6 @@ form.search-box2 .search-form a {
     color: #fff
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li {
-    border-bottom: 1px solid #f0e9ff;
-    transition: all 0.3s ease 0s;
-    padding-bottom: 12px
-}
-
-.blog_right_sidebar .post_category_widget .cat-list li:last-child {
-    border-bottom: 0
-}
-
-.blog_right_sidebar .post_category_widget .cat-list li a {
-    font-size: 14px;
-    line-height: 20px;
-    color: #888888
-}
-
-.blog_right_sidebar .post_category_widget .cat-list li a p {
-    margin-bottom: 0px
-}
-
-.blog_right_sidebar .post_category_widget .cat-list li+li {
-    padding-top: 15px
-}
-
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
     justify-content: center;
     align-self: center;
@@ -7377,4 +7363,86 @@ del {
 .single_sidebar_widget hr{
     margin: 25px 0;
     border: 1px solid rgba(100, 133, 165, 0.2);
+}
+
+.mobile-sidebar{
+    display: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+
+.mobile-sidebar #show-moblie-sidebar-button{
+    background-color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mobile-sidebar #show-moblie-sidebar-button p{
+    color: white;
+}
+
+.mobile-sidebar #other-department-container{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.mobile-sidebar #other-department-container.expanded {
+    max-height: 500px ;
+  }
+
+.mobile-sidebar #other-department-container .other-department{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 5px;
+}
+
+.mobile-sidebar #other-department-container .other-department a{
+    color: black;
+}
+
+.mobile-sidebar #other-department-container .other-department a:hover{
+    color: #bda418;
+}
+
+.reservation-container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.resrevation-main-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+.reservation-row{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+}
+
+.mobile-sidebar .other-department div:first-child{
+    grid-column: span 2;
+    text-align: center;
+}
+
+@media (max-width:1200px){
+    .reservation-sidebar{
+        display: none;
+    }
+
+    .resrevation-main-content{
+        flex-direction: column;
+    }
+
+    .mobile-sidebar{
+        display: block;
+    }
 }
