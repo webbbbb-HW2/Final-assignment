@@ -1,3 +1,4 @@
+/* Sidebar styling */
 .sidebar {
     position: sticky;
     top: 100px;
@@ -11,12 +12,14 @@
     max-height: 80vh;
 }
 
+/* Hide sidebar on smaller screens */
 @media (max-width: 999px) {
     .sidebar {
         display: none;
     }
 }
 
+/* Profile image styling */
 .profile-img {
     display: flex;
     justify-content: center;
@@ -28,6 +31,7 @@
     border: 2px solid #ddd;
 }
 
+/* Profile card styling */
 .profile-card .profile-img {
     flex-shrink: 0;
 }
@@ -42,6 +46,15 @@
     justify-content: flex-start;
 }
 
+.profile-details .profile-info > * {
+    margin-bottom: 8px;
+}
+
+.profile-details .profile-info > *:last-child {
+    margin-bottom: 0;
+}
+
+/* General card styling */
 .card {
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -58,31 +71,9 @@
     padding: 20px;
 }
 
-.blog_right_sidebar {
-    padding: 20px 0;
-}
-
-.single_sidebar_widget {
-    margin-bottom: 20px;
-}
-
-.widget_title {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.cat-list li {
-    list-style: none;
-}
-
-.cat-list li a {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.cat-list li a p {
-    margin: 0;
+/* Table styling */
+.table {
+    margin-bottom: 0;
 }
 
 .table th, .table td {
@@ -99,10 +90,25 @@
     vertical-align: middle;
 }
 
-.profile-details .profile-info > * {
-    margin-bottom: 8px;
+/* Custom button styling */
+.btn-custom {
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
 }
 
-.profile-details .profile-info > *:last-child {
-    margin-bottom: 0;
+.btn-custom:hover {
+    background-color: #ff3333;
+}
+
+/* Text link styling */
+.text-primary {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-primary:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
