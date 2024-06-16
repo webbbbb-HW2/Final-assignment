@@ -1,0 +1,95 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.section select, .section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.button:hover {
+    background-color: #45a049;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+  }
+
+.terms input {
+margin-right: 0;
+}
+
+.payment-info {
+display: none;
+}
+
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.flex-container div {
+margin-right: 10px;
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: auto;
+height: auto;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.payment-methods {
+display: flex;
+flex-direction: column;
+}
+
+.payment-methods label {
+margin-bottom: 10px;
+}
