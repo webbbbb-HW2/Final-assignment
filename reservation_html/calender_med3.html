@@ -339,7 +339,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap text-center pt-50">
-                            <h2>預約<span><h5>大圖掃描儀</h5></span></h2>
+                            <h2>預約<span><h5>全方位智慧型電流輸出電轉殖儀</h5></span></h2>
                         </div>
                     </div>
                 </div>
@@ -512,7 +512,7 @@
                             let hasTask = getTaskForDay(i) ? 'has-task' : '';
 
                             // 在這裡添加條件判斷以確定日期是否是指定日期（5月1號和5號）
-                            if (date.getMonth() === 4 && (i === 11 || i === 15|| i === 30)) {
+                            if (date.getMonth() === 4 && (i === 1 || i === 5)) {
                                 hasTask += ' special-date'; // 添加一個名為 special-date 的額外類
                             }
 
@@ -539,18 +539,13 @@
                     function getTaskForDay(day) {
                         // 這是一個範例函數，你可以根據需要修改，從實際的數據源獲取任務
                         const tasks = {
-                            11: [
-                                { name: '林正言', department: '音樂系', time: '10 AM', details: '1 PM' },
-                                { name: '李祺慧 ', department: ' 資訊管理系', time: '2 PM', details: '3 PM' }
+                            1: [
+                                { name: '蔡宜純', department: '服裝設計系', time: '10 AM', details: '1 PM' },
+                                { name: '李政昕 ', department: ' 織品系', time: '2 PM', details: '3 PM' }
                             ],
-                            15: [
-                                { name: '陳祺聖', department: ' 古典音樂系', time: '1 PM', details: '2 PM' },
-                                { name: '李政昕', department: ' 音樂系', time: '4 PM', details: '6 PM' },
-                                { name: '黃政慧', department: '服裝設計系', time: '7 PM', details: '10 PM' }
-                            ],
-                            30: [
+                            5: [
                                 { name: '陳祺聖', department: ' 應用美術系', time: '1 PM', details: '2 PM' },
-                                { name: '李政昕', department: ' 音樂系', time: '4 PM', details: '6 PM' },
+                                { name: '李政昕', department: ' 織品系', time: '4 PM', details: '6 PM' },
                                 { name: '黃瓊慧', department: '服裝設計系', time: '7 PM', details: '10 PM' }
                             ]
                         };
