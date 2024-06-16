@@ -2606,7 +2606,7 @@ hr {
 }
 
 .slider-area {
-    background-image: url(../img/hero/h1_hero.jpg);
+    background-image: url(../img/hero/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -3920,6 +3920,12 @@ form.search-box .select2-selection--single{
     }
 }
 
+.listing-details-area .single-listing{
+    position: relative;
+    width: 300px;
+    border: 1px solid gray;
+}
+
 .listing-details-area .single-listing .list-img {
     overflow: hidden;
     border-radius: 5px 5px 0 0
@@ -3927,17 +3933,132 @@ form.search-box .select2-selection--single{
 
 .listing-details-area .single-listing .list-img img {
     width: 100%;
+    height: 200px;
     transform: scale(1);
     transition: all 0.6s ease-out 0s
 }
 
 .listing-details-area .single-listing .list-caption {
     border: 1px solid #e1ebf7;
-    padding: 31px 24px 18px 24px;
     border-top: 0;
     position: relative;
-    z-index: 0
 }
+
+.listing-details-area .single-listing .target-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title{
+    height: 90px;
+    margin-top: 21px;
+    overflow: hidden;
+    position: relative;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title .list-caption-title-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.listing-details-area .single-listing .list-caption .list-caption-title .reservation-button-wrapper{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button{
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 96px;
+    height: 100%;
+    background: #ff3d1c;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 35px ;
+    z-index: 3;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button:hover a{
+    color : #ffe9a2;
+}
+
+.listing-details-area .single-listing .list-caption .reservation-button-wrapper .reservation-button a{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.list-caption .list-caption-title .list-caption-title-content.list-caption-title-slideIn{
+    animation-duration: 1s;
+    animation-name: list-caption-title-slideIn;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .list-caption-title .list-caption-title-content.list-caption-title-slideOut{
+    animation-duration: 0.8s;
+    animation-name: list-caption-title-slideOut;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .reservation-button-wrapper.reservation-button-slideIn{
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-name: reservation-button-slideIn;
+    animation-fill-mode: forwards;
+}
+
+.list-caption .reservation-button-wrapper.reservation-button-slideOut{
+    animation-duration: 1s;
+    animation-name: reservation-button-slideOut;
+    animation-fill-mode: forwards;
+}
+
+@keyframes list-caption-title-slideIn{
+    0% {padding-top: 100px;}
+    100% {padding-top: 10px;}
+}
+
+@keyframes list-caption-title-slideOut{
+    0% {top: 10px ;}
+    20% {top: 0px ;}
+    100%{top: 90px ;}
+}
+
+@keyframes reservation-button-slideIn{
+    0% {top: 90px;}
+    100% {top: 21px;}
+}
+
+@keyframes reservation-button-slideOut{
+    0% {top: 21px}
+    100% {top: 90px}
+}
+
+.listing-details-area .single-listing .list-caption a{
+    position: relative;
+    z-index: 3;
+}
+
 
 .listing-details-area .single-listing .list-caption span {
     color: #fff;
@@ -3951,7 +4072,21 @@ form.search-box .select2-selection--single{
     background: #ff3d1c;
     border-radius: 30px;
     text-align: center;
-    line-height: 35px
+    line-height: 35px ;
+}
+
+.listing-details-area .single-listing .single-listing-title{
+    z-index: 100;
+    margin-top: 31px;
+    margin-left: 24px;
+}
+
+.single-listing-title a{
+    z-index: 5;
+}
+
+.listing-details-area .single-listing .single-listing-title a{
+    z-index: 5;
 }
 
 .listing-details-area .single-listing .list-caption h3 {
@@ -3984,7 +4119,8 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing .list-caption p {
-    color: #57667e
+    color: #57667e ;
+    padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -3994,19 +4130,24 @@ form.search-box .select2-selection--single{
 }
 
 .listing-details-area .single-listing .list-footer {
-    border-top: 1px solid #e1ebf7;
-    margin-top: 20px;
-    padding-top: 20px
-}
-
-.listing-details-area .single-listing .list-footer ul {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    justify-content: space-between
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #e1ebf7 ;
 }
 
-.listing-details-area .single-listing .list-footer ul li {
-    color: #727272;
-    font-size: 14px
+.listing-details-area .single-listing .list-footer p{
+    color: rgb(44, 44, 113);
+    margin-bottom: 0;
+}
+
+.listing-details-area .single-listing .list-footer a{
+    color: rgb(48, 48, 138);
+    z-index: 5;
 }
 
 .listing-details-area .single-listing:hover .list-img img {
@@ -7221,7 +7362,19 @@ del {
     margin-bottom: 10px
 }
 
-/* Equipment */
-.equipment-box{
-    cursor: pointer;
+.main-content{
+    margin-left: 50px;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+}
+
+.single_sidebar_widget hr{
+    margin: 25px 0;
+    border: 1px solid rgba(100, 133, 165, 0.2);
 }
